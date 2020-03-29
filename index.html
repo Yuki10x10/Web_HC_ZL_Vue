@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web_Vue</title>
+    <!-- bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container" id="content">
+        <h1 class="text-center">練習使用Vue取得GITHUB API</h1>
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="輸入想要取得的帳號" aria-label="輸入想要取得的帳號"
+                aria-describedby="button-addon2" v-model="name">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">取得</button>
+            </div>
+        </div>
+        <H4>{{name}}的資料庫</H4>
+        <ul class="list-group">
+            <li class="list-group-item" v-for ="r in repos">{{ r.name }}</li>
+        </ul>
+
+    </div>
+    <!-- vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+   <!-- Axios CDN 非同步處理 AJAX 套件 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 自己的JS -->
+    <script src="./app.js"></script>
+
+</html>
