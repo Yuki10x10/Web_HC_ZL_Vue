@@ -20,7 +20,7 @@
             <input type="text" class="form-control" placeholder="輸入想要取得的帳號" aria-label="輸入想要取得的帳號"
                 aria-describedby="button-addon2" v-model="name">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">取得</button>
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="getRepos">取得</button>
             </div>
         </div>
         <H4>{{name}}的資料庫</H4>
@@ -35,5 +35,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- 自己的JS -->
     <script src="./app.js"></script>
+
+</body>
 
 </html>
